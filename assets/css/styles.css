@@ -1,0 +1,54 @@
+/* O botão foi modificado para ficar verde através da classe abaixo, que é a que está no documento. */
+/* Antes de alterar a cor dele mexemos na classe btn-outline-sucess e trocamos o nome dela por btn-primary */
+
+:root {
+    --bs-link-color: #198754;
+    --bs-link-hover-color: #146c43;
+}
+
+.btn {
+    --bs-btn-bg: #198754;
+    --bs-btn-border-color:#146c43;
+    --bs-btn-hover-bg: #146c43;
+    --bs-btn-hover-border-color: #146c43;
+    --bs-btn-active-bg: #0c5734;
+}
+
+main {
+    margin-top: 5rem;
+}
+
+section {
+    scroll-margin-top: 6rem;
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+
+/* Tamanho do carousel */
+
+.carousel-item {
+    height: 500px; /*Diminui o tamanho da imagem*/
+}
+
+.carousel-item img {
+    height: 100%; /* Para respeitar o tamanho colocado para o carousel-item */
+    object-fit: cover; /* Para que ele respeite o tamanho sem distorcer. */
+    object-position: center; /* Para, quando a imagem estiver muito grande, centralizar na página.*/
+}
+
+/*O código abaixo foi usado para deixar um degradê onde fica mais escuro na parte onde lemos os títulos.*/
+.carousel-item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgb(31,31,31)); /*Começa em transparente e depois passa para um tom mais escuro.*/
+    position: absolute; /* Deixa o elemento por cima do carrossel.*/
+
+}
+
+.card-menu img {
+    height: 300px;
+    object-fit: cover;
+}
